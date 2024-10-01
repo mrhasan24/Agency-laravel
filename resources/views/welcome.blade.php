@@ -20,7 +20,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="{{asset('frontend/vendors/bootstrap/css/bootstrap.min.css')}}" />
     <link rel="stylesheet" href="{{asset('frontend/vendors/animate/animate.min.css')}}" />
     <link rel="stylesheet" href="{{asset('frontend/vendors/animate/custom-animate.css')}}" />
@@ -256,176 +255,72 @@
         </div><!-- /.stricky-header -->
 
         <!-- Main Sllider Start -->
-        <section class="main-slider">
+           <!-- Main Sllider Start -->
+           <section class="main-slider">
             <div class="main-slider__carousel owl-carousel owl-theme thm-owl__carousel"
                 data-owl-options='{"loop": true, "items": 1, "navText": ["<span class=\"icon-left-arrow\"></span>","<span class=\"icon-right-arrow\"></span>"], "margin": 0, "dots": true, "nav": false, "animateOut": "slideOutDown", "animateIn": "fadeIn", "active": true, "smartSpeed": 1000, "autoplay": true, "autoplayTimeout": 7000, "autoplayHoverPause": false}'>
 
+                @foreach ($sliders as $key=>$slider)
                 <div class="item main-slider__slide-1">
+                <td>{{$key+1}}</td>
                     <div class="main-slider__bg"
-                        style="background-image: url(assets/images/backgrounds/slider-1-1.jpg);">
+                        style="background-image: url({{asset('uploads/slider/'. $slider->image)}});" >
                     </div><!-- /.slider-one__bg -->
                     <div class="main-slider__shape-1"></div>
                     <div class="main-slider__shape-2 float-bob-y">
-                        <img src="assets/images/shapes/main-slider-shape-2.png" alt="">
+                        <img src="{{asset('frontend/images/shapes/main-slider-shape-2.png')}}" alt="">
                     </div>
                     <div class="main-slider__shape-3 float-bob-x">
-                        <img src="assets/images/shapes/main-slider-shape-3.png" alt="">
+                        <img src="{{asset('frontend/images/shapes/main-slider-shape-3.png')}}" alt="">
                     </div>
                     <div class="container">
                         <div class="main-slider__content">
-                            <p class="main-slider__sub-title">Modern I Business I Consultan</p>
-                            <h2 class="main-slider__title">Digital Solution <br> Business</h2>
-                            <p class="main-slider__text">We're Best Consultant Agency In Market</p>
+                            <p class="main-slider__sub-title">{{$slider->tag}}</p>
+                            <h2 class="main-slider__title">{{$slider->title}}</h2>
+                            <p class="main-slider__text">{{$slider->sub_title}}</p>
                             <div class="main-slider__btn-box">
-                                <a href="about.html" class="thm-btn main-slider__btn">Discover More<span
+                                <a href="{{url($slider->button_link)}}" target="_blank" class="thm-btn main-slider__btn">Learn More<span
                                         class="fa fa-plus"></span></a>
                             </div>
                         </div>
                     </div>
                 </div>
+                @endforeach
 
-                <div class="item main-slider__slide-2">
-                    <div class="main-slider__bg"
-                        style="background-image: url(assets/images/backgrounds/slider-1-2.jpg);">
-                    </div><!-- /.slider-one__bg -->
-                    <div class="main-slider__shape-1"></div>
-                    <div class="main-slider__shape-2 float-bob-y">
-                        <img src="assets/images/shapes/main-slider-shape-2.png" alt="">
-                    </div>
-                    <div class="main-slider__shape-3 float-bob-x">
-                        <img src="assets/images/shapes/main-slider-shape-3.png" alt="">
-                    </div>
-                    <div class="container">
-                        <div class="main-slider__content">
-                            <p class="main-slider__sub-title">Modern I Business I Consultan</p>
-                            <h2 class="main-slider__title">Digital Solution <br> Business</h2>
-                            <p class="main-slider__text">We're Best Consultant Agency In Market</p>
-                            <div class="main-slider__btn-box">
-                                <a href="about.html" class="thm-btn main-slider__btn">Discover More<span
-                                        class="fa fa-plus"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="item main-slider__slide-3">
-                    <div class="main-slider__bg"
-                        style="background-image: url(assets/images/backgrounds/slider-1-3.jpg);">
-                    </div><!-- /.slider-one__bg -->
-                    <div class="main-slider__shape-1"></div>
-                    <div class="main-slider__shape-2 float-bob-y">
-                        <img src="assets/images/shapes/main-slider-shape-2.png" alt="">
-                    </div>
-                    <div class="main-slider__shape-3 float-bob-x">
-                        <img src="assets/images/shapes/main-slider-shape-3.png" alt="">
-                    </div>
-                    <div class="container">
-                        <div class="main-slider__content">
-                            <p class="main-slider__sub-title">Modern I Business I Consultan</p>
-                            <h2 class="main-slider__title">Digital Solution <br> Business</h2>
-                            <p class="main-slider__text">We're Best Consultant Agency In Market</p>
-                            <div class="main-slider__btn-box">
-                                <a href="about.html" class="thm-btn main-slider__btn">Discover More<span
-                                        class="fa fa-plus"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
         </section>
         <!--Main Sllider Start -->
+        <!--Main Sllider Start -->
 
-        <!--Brand One Start-->
-        <section class="brand-one">
-            <div class="brand-one__inner">
-                <div class="brand-one__carousel thm-owl__carousel owl-theme owl-carousel" data-owl-options='{
-                    "items": 3,
-                    "margin": 45,
-                    "smartSpeed": 700,
-                    "loop":true,
-                    "autoplay": 6000,
-                    "nav":false,
-                    "dots":false,
-                    "navText": ["<span class=\"fa fa-angle-left\"></span>","<span class=\"fa fa-angle-right\"></span>"],
-                    "responsive":{
-                        "0":{
-                            "items":1
-                        },
-                        "768":{
-                            "items":3
-                        },
-                        "992":{
-                            "items": 4
-                        },
-                        "1200":{
-                            "items": 6
-                        }
-                    }
-                }'>
-                    <!--Brand One Single-->
-                    <div class="brand-one__single">
-                        <div class="brand-one__img">
-                            <img src="assets/images/brand/brand-1-1.png" alt="">
-                        </div>
-                    </div>
-                    <!--Brand One Single-->
-                    <div class="brand-one__single">
-                        <div class="brand-one__img">
-                            <img src="assets/images/brand/brand-1-2.png" alt="">
-                        </div>
-                    </div>
-                    <!--Brand One Single-->
-                    <div class="brand-one__single">
-                        <div class="brand-one__img">
-                            <img src="assets/images/brand/brand-1-3.png" alt="">
-                        </div>
-                    </div>
-                    <!--Brand One Single-->
-                    <div class="brand-one__single">
-                        <div class="brand-one__img">
-                            <img src="assets/images/brand/brand-1-4.png" alt="">
-                        </div>
-                    </div>
-                    <!--Brand One Single-->
-                    <div class="brand-one__single">
-                        <div class="brand-one__img">
-                            <img src="assets/images/brand/brand-1-5.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <!-- If we need navigation buttons -->
-            </div>
-        </section>
-        <!--Brand One End-->
+    
 
         <!--Feature One Start-->
+   
+        <!--Feature One End-->
+
         <section class="feature-one">
             <div class="container">
                 <div class="row">
                     <!--Feature One Single Start-->
+                    @foreach ($features as $feature )
                     <div class="col-xl-3 col-lg-6 col-md-6">
+                    
                         <div class="feature-one__single">
                             <div class="feature-one__icon">
-                                <span class="icon-project-management"></span>
+                                <span class=""><img src="{{asset('uploads/feature/'. $feature->image)}}" style="width:30px;" alt=""></span>
                             </div>
                             <div class="feature-one__content">
-                                <h3 class="feature-one__title"><a href="services-details.html">Manage It Services</a>
+                                <h3 class="feature-one__title"><a href="#">{{$feature->title}}</a>
                                 </h3>
-                                <p class="feature-one__text">Complete account of system, and expound the actual</p>
+                                <p class="feature-one__text">{{$feature->subtitle}}</p>
                             </div>
                         </div>
+                       
                     </div>
-                    <!--Feature One Single End-->
-                    <!--Feature One Single Start-->
+                    @endforeach
                     
-                    <!--Feature One Single End-->
-                    <!--Feature One Single Start-->
-                   
-                    <!--Feature One Single End-->
-                    <!--Feature One Single Start-->
-                    
-                    <!--Feature One Single End-->
                 </div>
             </div>
         </section>
@@ -434,32 +329,27 @@
         <!--About One Start-->
         <section class="about-one">
             <div class="container">
+           
                 <div class="row">
                     <div class="col-xl-6">
                         <div class="about-one__left">
                             <div class="about-one__img wow slideInLeft" data-wow-delay="100ms"
                                 data-wow-duration="2500ms">
-                                <img src="assets/images/resources/about-one-img-1.jpg" alt="">
+                                <img src="{{asset('fontend/images/about-one-img-2.jpg')}}" alt="">
+                                @foreach ($abouts as $about)
                                 <div class="about-one__experience-text">
-                                    <p>12 years Experience</p>
+                                    <p>{{$about->experience}}years Experience</p>
                                 </div>
                                 <div class="about-one__img-box">
                                     <div class="about-one__img-2">
-                                        <img src="assets/images/resources/about-one-img-2.jpg" alt="">
-                                        <div class="about-one__video-link">
-                                            <a href="#" class="video-popup">
-                                                <div class="about-one__video-icon">
-                                                    <span class="fa fa-play"></span>
-                                                    <i class="ripple"></i>
-                                                </div>
-                                            </a>
-                                        </div>
+                                        <img src="{{asset('fontend/images/about-one-img-2.jpg')}}" alt="">
+                                       
                                         <div class="about-one__shape-1"></div>
                                     </div>
                                 </div>
                                 <div class="about-one__project-complete">
                                     <div class="about-one__count count-box">
-                                        <h3 class="count-text" data-stop="100" data-speed="1500">00</h3>
+                                        <h3 class="count-text" data-stop="100" data-speed="1500">{{$about->projectcomplete}}</h3>
                                         <span>+</span>
                                     </div>
                                     <p class="about-one__count-text">Project
@@ -473,16 +363,13 @@
                             <div class="section-title text-left">
                                 <div class="section-title__tagline-box">
                                     <div class="section-title__tagline-icon">
-                                        <img src="assets/images/icon/section-title-icon.png" alt="">
+                                        <img src="{{asset('frontend/images/icon/section-title-icon.png')}}" alt="">
                                     </div>
                                     <p class="section-title__tagline">About Us</p>
                                 </div>
-                                <h2 class="section-title__title">Creating Unmatched
-                                    <br> Technology</h2>
+                                <h2 class="section-title__title">{{$about->abouttitle}}</h2>
                             </div>
-                            <p class="about-one__text">Non augue egestas, commodo velit eget, vestibulum tellus.
-                                Curabitur vulputate justo elit, at elementum orci pulvinar vel. in a Pellentesque
-                                habitant morbi tristique. Pellentesque habitant morbi tristique.
+                            <p class="about-one__text">{{$about->aboutdescription}}
                             </p>
                             <ul class="about-one__points list-unstyled">
                                 <li>
@@ -502,7 +389,7 @@
                                     </div>
                                 </li>
                             </ul>
-                            <div class="about-one__it-solution">
+                            <!-- <div class="about-one__it-solution">
                                 <div class="about-one__it-solution-img">
                                     <img src="assets/images/resources/about-one-it-solution-img.jpg" alt="">
                                 </div>
@@ -510,10 +397,10 @@
                                     <p> IT Solutions Services Company
                                         Funded in <span>1998</span></p>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="about-one__btn-and-contact">
                                 <div class="about-one__btn-box">
-                                    <a href="about.html" class="about-one__btn thm-btn">Discover More<span
+                                    <a href="{{url($about->abbutton)}}" class="about-one__btn thm-btn">Discover More<span
                                             class="fa fa-plus"></span></a>
                                 </div>
                                 <div class="about-one__contact-box">
@@ -522,18 +409,20 @@
                                     </div>
                                     <div class="about-one__contact">
                                         <span>Call Anytime</span>
-                                        <p><a href="tel:9288006780">+92 ( 8800 ) - 6780</a></p>
+                                        <p><a href="tel:{{url($about->phone)}}">{{$about->phone}}</a></p>
                                     </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+             
             </div>
         </section>
         <!--About One End-->
 
-        <!--Process One Start-->
+        <!--Process One Start
         <section class="process-one">
             <div class="process-one__inner">
                 <div class="process-one__shape-1 float-bob-y-2">
@@ -581,110 +470,79 @@
                 </div>
             </div>
         </section>
-        <!--Process One End-->
-
-        <!--Services One Start-->
-        <section class="services-one">
+        Process One End-->
+     <!--Services One Start-->
+     <!--Services One Start-->
+     <section class="services-one">
             <div class="container">
                 <div class="section-title text-center">
                     <div class="section-title__tagline-box">
                         <div class="section-title__tagline-icon">
-                            <img src="assets/images/icon/section-title-icon.png" alt="">
+                            <img src="frontend/images/icon/section-title-icon.png" alt="">
                         </div>
                         <p class="section-title__tagline">What We Offering</p>
                     </div>
                     <h2 class="section-title__title">We Make Bright Agency</h2>
                 </div>
+                <div class="row">
+                    
                 <div class="services-one__inner">
+                    <div class="col-md-12">
+                        
                     <ul class="services-one__services-list list-unstyled">
-                        <li>
-                            <div class="services-one__single">
-                                <div class="services-one__icon">
-                                    <span class="icon-coding"></span>
+
+
+
+                    @foreach ($services as $key=>$service)
+                        <div class="col-md-4">
+                            <div class="servicesitem"> 
+                                <div class="services-one__single product">
+                                    <div class="services-one__icon">
+                                    <img src="{{asset('uploads/service/'. $service->image)}}" alt="">
+                                       <h3 class="services-one__title ">   
+                                       <a href="#">{{$service->services_name}}</a></h3>
+                                   </div>
+                                   <div class="product-text">  
+
+                                   <div class="ser-item-list">
+                                    <a href="#"><li>{{$service->servicesitem1}}</li></a>
+                                    <a href="#"><li>{{$service->servicesitem2}}</li></a>
+                                    <a href="#"><li>{{$service->servicesitem3}}</li></a>
+                                    <a href="#"><li>{{$service->servicesitem4}}</li></a>
+                                    <a href="#"><li>{{$service->servicesitem5}}</li></a>
+
+
+
+
+                                   </div>
+
+                                    </div>
                                 </div>
-                                <h3 class="services-one__title"><a href="services-details.html">Product
-                                        <br> Development</a></h3>
                             </div>
-                        </li>
-                        <li>
-                            <div class="services-one__single">
-                                <div class="services-one__icon">
-                                    <span class="icon-cloud-database"></span>
-                                </div>
-                                <h3 class="services-one__title"><a href="services-details.html">Cloud
-                                        <br> Computing</a></h3>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="services-one__single">
-                                <div class="services-one__icon">
-                                    <span class="icon-ux-design"></span>
-                                </div>
-                                <h3 class="services-one__title"><a href="services-details.html">UI/UX
-                                        <br> Designing</a></h3>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="services-one__single">
-                                <div class="services-one__icon">
-                                    <span class="icon-cyber-security"></span>
-                                </div>
-                                <h3 class="services-one__title"><a href="services-details.html">Cyber
-                                        <br> Security</a></h3>
-                            </div>
-                        </li>
+                        </div>
+
+                        @endforeach
+
                     </ul>
-                    <ul class="services-one__services-list list-unstyled">
-                        <li>
-                            <div class="services-one__single">
-                                <div class="services-one__icon">
-                                    <span class="icon-event-management"></span>
-                                </div>
-                                <h3 class="services-one__title"><a href="services-details.html">Event
-                                        <br> Processing</a></h3>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="services-one__single">
-                                <div class="services-one__icon">
-                                    <span class="icon-content-management-1"></span>
-                                </div>
-                                <h3 class="services-one__title"><a href="services-details.html">Content
-                                        <br> Management</a></h3>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="services-one__single">
-                                <div class="services-one__icon">
-                                    <span class="icon-cyber-security"></span>
-                                </div>
-                                <h3 class="services-one__title"><a href="services-details.html">Cyber
-                                        <br> Security</a></h3>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="services-one__single">
-                                <div class="services-one__icon">
-                                    <span class="icon-backup"></span>
-                                </div>
-                                <h3 class="services-one__title"><a href="services-details.html">Backup
-                                        <br> & Recovery</a></h3>
-                            </div>
-                        </li>
-                    </ul>
+
+                    </div> 
+                </div>
                 </div>
             </div>
         </section>
         <!--Services One End-->
 
-        <!--Benefits One Start-->
+        <!--Services One End-->
+
+
+        <!--Benefits One Start
         <section class="benefits-one">
             <div class="benefits-one__shape-1">
                 <div class="benefits-one__shape-bg"
-                    style="background-image: url(assets/images/backgrounds/benefits-one-shape-bg.png);"></div>
+                    style="background-image: url({{asset('frontend/images/backgrounds/benefits-one-shape-bg.png')}});"></div>
             </div>
             <div class="benefits-one__bg-one"
-                style="background-image: url(assets/images/backgrounds/benefits-one-bg-one.jpg);"></div>
+                style="background-image: url({{asset('frontend/images/backgrounds/benefits-one-bg-one.jpg')}});"></div>
             <div class="benefits-one__overly"></div>
             <div class="container">
                 <div class="row">
@@ -692,7 +550,7 @@
                         <div class="benefits-one__left">
                             <div class="benefits-one__img wow slideInLeft" data-wow-delay="100ms"
                                 data-wow-duration="2500ms">
-                                <img src="assets/images/resources/benefits-one-img-1.jpg" alt="">
+                                <img src="{{asset('frontend/images/resources/benefits-one-img-1.jpg')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -740,88 +598,107 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!--Benefits One End-->
+        </section>Benefits One End-->
 
         <!--Portfolio One STart-->
-        <section class="portfolio-one">
+        <section class="portfolio-two">
             <div class="container">
-                <div class="section-title text-center">
-                    <div class="section-title__tagline-box">
-                        <div class="section-title__tagline-icon">
-                            <img src="assets/images/icon/section-title-icon.png" alt="">
-                        </div>
-                        <p class="section-title__tagline">Our Recent Work</p>
+                <div class="section-title-two text-center">
+                    <div class="section-title-two__tagline-box">
+                        <span class="section-title-two__tagline">Our Portfolio</span>
                     </div>
-                    <h2 class="section-title__title">Our New Case Studies</h2>
+                    <h2 class="section-title-two__title">Our Case Studies</h2>
                 </div>
-                <ul class="list-unstyled portfolio-one__list">
-                    <li>
-                        <div class="portfolio-one__single">
-                            <div class="portfolio-one__img"
-                                style="background-image:url(assets/images/project/portfolio-1-1.jpg);">
-                                <div class="portfolio-one__title-box">
-                                    <h4 class="portfolio-one__title"><a href="portfolio-details.html">Application
-                                            integration</a></h4>
-                                    <div class="portfolio-one__arrow">
-                                        <a href="assets/images/project/portfolio-1-1.jpg" class="img-popup"><span
-                                                class="icon-right-arrow1"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="portfolio-one__single">
-                            <div class="portfolio-one__img"
-                                style="background-image:url(assets/images/project/portfolio-1-2.jpg);">
-                                <div class="portfolio-one__title-box">
-                                    <h4 class="portfolio-one__title"><a href="portfolio-details.html">Platform
-                                            Integration</a></h4>
-                                    <div class="portfolio-one__arrow">
-                                        <a href="assets/images/project/portfolio-1-2.jpg" class="img-popup"><span
-                                                class="icon-right-arrow1"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="portfolio-one__single">
-                            <div class="portfolio-one__img"
-                                style="background-image:url(assets/images/project/portfolio-1-3.jpg);">
-                                <div class="portfolio-one__title-box">
-                                    <h4 class="portfolio-one__title"><a href="portfolio-details.html">Excepteur
-                                            integration</a></h4>
-                                    <div class="portfolio-one__arrow">
-                                        <a href="assets/images/project/portfolio-1-3.jpg" class="img-popup"><span
-                                                class="icon-right-arrow1"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="portfolio-one__single">
-                            <div class="portfolio-one__img"
-                                style="background-image:url(assets/images/project/portfolio-1-4.jpg);">
-                                <div class="portfolio-one__title-box">
-                                    <h4 class="portfolio-one__title"><a href="portfolio-details.html">Software
-                                            integration</a></h4>
-                                    <div class="portfolio-one__arrow">
-                                        <a href="assets/images/project/portfolio-1-4.jpg" class="img-popup"><span
-                                                class="icon-right-arrow1"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                <ul class="portfolio-two-filter style1 post-filter has-dynamic-filters-counter list-unstyled">
+                    <li data-filter=".filter-item" class="active"><span class="filter-text">All Work</span></li>
+                    <li data-filter=".ser"><span class="filter-text">Cloud Services</span></li>
+                    <li data-filter=".illus"><span class="filter-text">illustration</span></li>
+                    <li data-filter=".photo"><span class="filter-text">Photography</span></li>
+                    <li data-filter=".web"><span class="filter-text last-pd-none">Web design</span></li>
                 </ul>
+                <div class="row filter-layout">
+                    <!--Portfolio Two Single Start-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 filter-item ser illus photo web">
+                        <div class="portfolio-two__single">
+                            <div class="portfolio-two__img">
+                                <img src="assets/images/project/portfolio-two-1-1.jpg" alt="">
+                                <div class="portfolio-two__content">
+                                    <p class="portfolio-two__sub-title">Web design</p>
+                                    <h3 class="portfolio-two__title"><a href="portfolio-details.html">Fimlor
+                                            Experience</a></h3>
+                                </div>
+                                <div class="portfolio-two__arrow">
+                                    <a href="assets/images/project/portfolio-two-1-1.jpg" class="img-popup">
+                                        <span class="icon-back"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Portfolio Two Single End-->
+                    <!--Portfolio Two Single Start-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 filter-item ser web">
+                        <div class="portfolio-two__single">
+                            <div class="portfolio-two__img">
+                                <img src="assets/images/project/portfolio-two-1-2.jpg" alt="">
+                                <div class="portfolio-two__content">
+                                    <p class="portfolio-two__sub-title">Web design</p>
+                                    <h3 class="portfolio-two__title"><a href="portfolio-details.html">Fimlor
+                                            Experience</a></h3>
+                                </div>
+                                <div class="portfolio-two__arrow">
+                                    <a href="assets/images/project/portfolio-two-1-2.jpg" class="img-popup">
+                                        <span class="icon-back"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Portfolio Two Single End-->
+                    <!--Portfolio Two Single Start-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 filter-item illus photo">
+                        <div class="portfolio-two__single">
+                            <div class="portfolio-two__img">
+                                <img src="assets/images/project/portfolio-two-1-3.jpg" alt="">
+                                <div class="portfolio-two__content">
+                                    <p class="portfolio-two__sub-title">Web design</p>
+                                    <h3 class="portfolio-two__title"><a href="portfolio-details.html">Fimlor
+                                            Experience</a></h3>
+                                </div>
+                                <div class="portfolio-two__arrow">
+                                    <a href="assets/images/project/portfolio-two-1-3.jpg" class="img-popup">
+                                        <span class="icon-back"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Portfolio Two Single End-->
+                    <!--Portfolio Two Single Start-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 filter-item ser illus">
+                        <div class="portfolio-two__single">
+                            <div class="portfolio-two__img">
+                                <img src="assets/images/project/portfolio-two-1-4.jpg" alt="">
+                                <div class="portfolio-two__content">
+                                    <p class="portfolio-two__sub-title">Web design</p>
+                                    <h3 class="portfolio-two__title"><a href="portfolio-details.html">Fimlor
+                                            Experience</a></h3>
+                                </div>
+                                <div class="portfolio-two__arrow">
+                                    <a href="assets/images/project/portfolio-two-1-4.jpg" class="img-popup">
+                                        <span class="icon-back"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Portfolio Two Single End-->
+                </div>
             </div>
         </section>
         <!--Portfolio One End-->
 
-        <!--FAQ One Start-->
+        <!--FAQ One Start
         <section class="faq-one">
             <div class="container">
                 <div class="row">
@@ -873,7 +750,7 @@
                                             <p>Excepteur sint occaecat cupidatat non proide sunt in culpa qui off
                                                 deserunt mollit anim id est laborum. omnis iste natus error sit
                                                 voluptate audantium, totam rem aperiam,</p>
-                                        </div><!-- /.inner -->
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="accrodion  active">
@@ -885,7 +762,7 @@
                                             <p>Excepteur sint occaecat cupidatat non proide sunt in culpa qui off
                                                 deserunt mollit anim id est laborum. omnis iste natus error sit
                                                 voluptate audantium, totam rem aperiam,</p>
-                                        </div><!-- /.inner -->
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="accrodion">
@@ -897,7 +774,7 @@
                                             <p>Excepteur sint occaecat cupidatat non proide sunt in culpa qui off
                                                 deserunt mollit anim id est laborum. omnis iste natus error sit
                                                 voluptate audantium, totam rem aperiam,</p>
-                                        </div><!-- /.inner -->
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="accrodion">
@@ -909,7 +786,7 @@
                                             <p>Excepteur sint occaecat cupidatat non proide sunt in culpa qui off
                                                 deserunt mollit anim id est laborum. omnis iste natus error sit
                                                 voluptate audantium, totam rem aperiam,</p>
-                                        </div><!-- /.inner -->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -917,8 +794,7 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!--FAQ One End-->
+        </section>FAQ One End-->
 
         <!--CTA One Start-->
         <section class="cta-one">
@@ -930,7 +806,7 @@
                     </div>
                     <div class="cta-one__content">
                         <p class="cta-one__text">Lorem ipsum dolor sit am cons sid</p>
-                        <p class="cta-one__number"><a href="tel:+13562220077">+ 1- (356) 222-0077
+                        <p class="cta-one__number"><a href="tel:+880178817975">+880178817975
                             </a></p>
                     </div>
                 </div>
@@ -939,76 +815,37 @@
         <!--CTA One End-->
 
         <!--Counter One Start-->
-        <section class="counter-one">
+               <!--Counter One Start-->
+               <section class="counter-one">
             <div class="counter-one__bg img-bounce"
-                style="background-image: url(assets/images/backgrounds/counter-one-bg.png);">
+                style="background-image: url('{{asset("frontend/images/Have Any Question1.png")}}');">
             </div>
             <div class="counter-one__bg-two"
-                style="background-image: url(assets/images/backgrounds/counter-one-bg-two.jpg);"></div>
+                style="background-image: url('{{asset("frontend/images/Have Any Question2.png")}}');"></div>
             <div class="counter-one__bg-three"
-                style="background-image: url(assets/images/backgrounds/counter-one-bg-three.jpg);"></div>
+                style="background-image: url('{{asset("frontend/images/Have Any Question3.jpg")}}');"></div>
             <div class="container">
                 <div class="counter-one__inner">
                     <ul class="counter-one__count-list list-unstyled">
+                    @foreach ($successcounter as $key=>$successcounter)
+
                         <li class="wow fadeInUp" data-wow-delay="100ms">
                             <div class="counter-one__single">
                                 <div class="counter-one__icon">
-                                    <span class="icon-award"></span>
+                                    <span class="#"><img src="{{asset('uploads/infocountr/'. $successcounter->image)}}" alt=""></span>
                                 </div>
-                                <p class="counter-one__text">Complete Project</p>
+                                <p class="counter-one__text">{{$successcounter->title}}</p>
                                 <div class="counter-one__count count-box">
-                                    <h3 class="count-text" data-stop="5684" data-speed="1500">00</h3>
+                                    <h3 class="count-text" data-stop="5684" data-speed="1500">{{$successcounter->counter}}+</h3>
                                 </div>
                             </div>
                         </li>
-                        <li class="wow fadeInUp" data-wow-delay="200ms">
-                            <div class="counter-one__single">
-                                <div class="counter-one__icon">
-                                    <span class="icon-download"></span>
-                                </div>
-                                <p class="counter-one__text">Total Download</p>
-                                <div class="counter-one__count count-box">
-                                    <h3 class="count-text" data-stop="5593" data-speed="1500">00</h3>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInUp" data-wow-delay="300ms">
-                            <div class="counter-one__single">
-                                <div class="counter-one__icon">
-                                    <span class="icon-feedback"></span>
-                                </div>
-                                <p class="counter-one__text">Positive Review</p>
-                                <div class="counter-one__count count-box">
-                                    <h3 class="count-text" data-stop="5487" data-speed="1500">00</h3>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInUp" data-wow-delay="400ms">
-                            <div class="counter-one__single">
-                                <div class="counter-one__icon">
-                                    <span class="icon-management"></span>
-                                </div>
-                                <p class="counter-one__text">Team Members</p>
-                                <div class="counter-one__count count-box">
-                                    <h3 class="count-text" data-stop="2474" data-speed="1500">00</h3>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInUp" data-wow-delay="500ms">
-                            <div class="counter-one__single">
-                                <div class="counter-one__icon">
-                                    <span class="icon-award"></span>
-                                </div>
-                                <p class="counter-one__text">Cup Of Coffee</p>
-                                <div class="counter-one__count count-box">
-                                    <h3 class="count-text" data-stop="6497" data-speed="1500">00</h3>
-                                </div>
-                            </div>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
         </section>
+        <!--Counter One End-->
         <!--Counter One End-->
 
         <!--Pricing One Start-->
@@ -1365,7 +1202,7 @@
                                                 </div>
                                                 <p class="testimonial-one__text">Lorem ipsum is to create a natura
                                                     consectetur in a tip
-                                                    looking block of text that dofesn'tdistract from the largere
+                                                    looking block of text that doesn'tdistract from the largere
                                                     layout aying out pages with meaningle aute are bigiger
                                                     in reprehenderit nulla pariatur at doesn'tdistra gseoert
                                                     loked tips for at busimsgd juge the ateste workseres.</p>
@@ -1719,8 +1556,7 @@
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="icon-right-arrow"></i></a>
 
 
-     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <!-- <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script> -->

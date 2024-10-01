@@ -3323,6 +3323,7 @@ ul {
   margin-left: 80px;
   margin-right: -53px;
   margin-top: 45px;
+  margin-bottom: 55px;
 }
 
 .about-one__right .section-title {
@@ -3660,7 +3661,7 @@ display: none;
   position: relative;
   display: block;
   background-color: #040405;
-  padding: 260px 0 120px;
+  padding: 100px 0 120px;
   margin-top: -160px;
   z-index: 1;
 }

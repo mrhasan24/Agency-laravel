@@ -33,9 +33,13 @@
                     <a href="javascript:void(0);" class="waves-effect"><i class="ti-agenda"></i> <span> Home page Control</span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
                     <ul class="list-unstyled">
                         <li><a href="{{ route('slider.index')}}">Slider</a></li>
-                        <li><a href="ui-panels.html">Panels</a></li>
-                        <li><a href="ui-tabs-accordions.html">Tabs &amp; Accordions</a></li>
-                        <li><a href="ui-modals.html">Modals</a></li>
+                        <li><a href="{{ route('feature.index')}}">Feature</a></li>
+                        <li><a href="{{ route('about.index')}}">About</a></li>
+                        <li><a href="{{ route('category.index')}}">Category</a></li>
+                        <li><a href="{{ route('item.index')}}">Portfolio</a></li>
+                        <li><a href="{{ route('successcounter.index')}}">Success Score</a></li>
+
+
                         <li><a href="ui-components.html">Components</a></li>
                         <li><a href="ui-progressbars.html">Progress Bars</a></li>
                         <li><a href="ui-alerts.html">Alerts</a></li>
