@@ -38,6 +38,8 @@
                         <li><a href="{{ route('category.index')}}">Category</a></li>
                         <li><a href="{{ route('item.index')}}">Portfolio</a></li>
                         <li><a href="{{ route('successcounter.index')}}">Success Score</a></li>
+                        <li><a href="{{ route('team.index')}}">Team</a></li>
+
 
 
                         <li><a href="ui-components.html">Components</a></li>

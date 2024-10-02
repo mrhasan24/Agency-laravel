@@ -827,12 +827,12 @@
             <div class="container">
                 <div class="counter-one__inner">
                     <ul class="counter-one__count-list list-unstyled">
-                    @foreach ($successcounter as $key=>$successcounter)
+                    @foreach ($successcounters as $key=>$successcounter)
 
                         <li class="wow fadeInUp" data-wow-delay="100ms">
                             <div class="counter-one__single">
                                 <div class="counter-one__icon">
-                                    <span class="#"><img src="{{asset('uploads/infocountr/'. $successcounter->image)}}" alt=""></span>
+                                    <span class="#"><img src="{{asset('uploads/successcounter/'. $successcounter->image)}}" alt=""></span>
                                 </div>
                                 <p class="counter-one__text">{{$successcounter->title}}</p>
                                 <div class="counter-one__count count-box">
@@ -848,7 +848,7 @@
         <!--Counter One End-->
         <!--Counter One End-->
 
-        <!--Pricing One Start-->
+        <!--Pricing One Start
         <section class="pricing-one">
             <div class="pricing-one__bg" style="background-image: url(assets/images/backgrounds/pricing-one-bg.jpg);">
             </div>
@@ -863,7 +863,7 @@
                     <h2 class="section-title__title">Select Your Choice Plan</h2>
                 </div>
                 <div class="row">
-                    <!--Pricing One Single Start-->
+
                     <div class="col-xl-4 col-lg-4">
                         <div class="pricing-one__single">
                             <div class="pricing-one__inner">
@@ -903,8 +903,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--Pricing One Single End-->
-                    <!--Pricing One Single Start-->
+  
                     <div class="col-xl-4 col-lg-4">
                         <div class="pricing-one__single">
                             <div class="pricing-one__inner">
@@ -944,8 +943,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--Pricing One Single End-->
-                    <!--Pricing One Single Start-->
+                
                     <div class="col-xl-4 col-lg-4">
                         <div class="pricing-one__single">
                             <div class="pricing-one__inner">
@@ -985,19 +983,19 @@
                             </div>
                         </div>
                     </div>
-                    <!--Pricing One Single End-->
+
                 </div>
             </div>
         </section>
         <!--Pricing One End-->
 
         <!--Team One Start-->
-        <section class="team-one">
+<section class="team-one">
             <div class="container">
                 <div class="section-title text-center">
                     <div class="section-title__tagline-box">
                         <div class="section-title__tagline-icon">
-                            <img src="assets/images/icon/section-title-icon.png" alt="">
+                            <img src="frontend/images/icon/section-title-icon.png" alt="">
                         </div>
                         <p class="section-title__tagline">Meet Our Team</p>
                     </div>
@@ -1005,90 +1003,37 @@
                 </div>
                 <div class="row">
                     <!--Team One Single Start-->
+                    @foreach ($teams as $key=>$team)
                     <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                    
                         <div class="team-one__single">
                             <div class="team-one__img-box">
                                 <div class="team-one__img">
-                                    <img src="assets/images/team/team-1-1.jpg" alt="">
+                                    <img src="{{asset('uploads/team/'. $team->image)}}" alt="">
                                     <div class="team-one__name-box">
-                                        <h3 class="team-one__name"><a href="team-details.html">Jecika Brown</a></h3>
-                                        <p class="team-one__sub-title">Web Designer</p>
+                                        <h3 class="team-one__name"><a href="{{url('team'.$team->id)}}">{{$team->name}}</a></h3>
+                                        <p class="team-one__sub-title">{{$team->designation}}</p>
                                     </div>
                                 </div>
                                 <ul class="list-unstyled team-one__social">
-                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="{{url($team->facebook_link)}}"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a href="{{url($team->twitter_link)}}"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="{{url($team->pinterest_link)}}"><i class="fab fa-pinterest-p"></i></a></li>
+                                    <li><a href="{{url($team->instagram_link)}}"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="{{url($team->dribbble_link)}}"><i class="fab fa-dribbble"></i></a></li>
+
                                 </ul>
                             </div>
                         </div>
                     </div>
+                    @endforeach
                     <!--Team One Single End-->
-                    <!--Team One Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                        <div class="team-one__single">
-                            <div class="team-one__img-box">
-                                <div class="team-one__img">
-                                    <img src="assets/images/team/team-1-2.jpg" alt="">
-                                    <div class="team-one__name-box">
-                                        <h3 class="team-one__name"><a href="team-details.html">Jhon Smith</a></h3>
-                                        <p class="team-one__sub-title">Web Designer</p>
-                                    </div>
-                                </div>
-                                <ul class="list-unstyled team-one__social">
-                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Team One Single End-->
-                    <!--Team One Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="team-one__single">
-                            <div class="team-one__img-box">
-                                <div class="team-one__img">
-                                    <img src="assets/images/team/team-1-3.jpg" alt="">
-                                    <div class="team-one__name-box">
-                                        <h3 class="team-one__name"><a href="team-details.html">Alisha Martin</a></h3>
-                                        <p class="team-one__sub-title">Web Designer</p>
-                                    </div>
-                                </div>
-                                <ul class="list-unstyled team-one__social">
-                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Team One Single End-->
-                    <!--Team One Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                        <div class="team-one__single">
-                            <div class="team-one__img-box">
-                                <div class="team-one__img">
-                                    <img src="assets/images/team/team-1-4.jpg" alt="">
-                                    <div class="team-one__name-box">
-                                        <h3 class="team-one__name"><a href="team-details.html">David Kapor</a></h3>
-                                        <p class="team-one__sub-title">Web Designer</p>
-                                    </div>
-                                </div>
-                                <ul class="list-unstyled team-one__social">
-                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Team One Single End-->
+        
+                    
+                    
+                    
                 </div>
+            
             </div>
         </section>
         <!--Team One End-->

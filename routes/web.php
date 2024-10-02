@@ -10,6 +10,11 @@ use App\Http\Controllers\Admin\ServicesController;
 use App\Http\Controllers\Admin\ItemController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\SuccesscounterController;
+use App\Http\Controllers\Admin\TeamController;
+use App\Http\Controllers\Admin\SimfController;
+use App\Http\Controllers\Page\TeammamberDtController;
+
+
 
 
 
@@ -46,4 +51,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::resource('category', CategoryController::class);
     Route::resource('item', ItemController::class);
     Route::resource('successcounter', App\Http\Controllers\Admin\SuccesscounterController::class);
+    Route::resource('team', App\Http\Controllers\Admin\TeamController::class);
+    Route::resource('simple', App\Http\Controllers\Admin\SimfController::class);
+});
+
+Route::group(['prefix' => '/'],function(){
+    Route::get('team-details' , [App\Http\Controllers\Page\TeammamberDtController::class, 'index'])->name('pages.team');
+    
+    
 });
