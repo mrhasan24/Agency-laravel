@@ -38,11 +38,11 @@ class ItemController extends Controller
             'category'=>'required',
             'name'=>'required',
             'description'=>'required',
+            'image'=>'required',
             'price'=>'required',
-            'client_name'=>'required',
-            'Project'=>'required',
-            'Services'=>'required',
-            'image'=>'required'
+            'clients_name'=>'required',
+            'Service'=>'required',
+            'Project'=>'required'
         ]);
         $image = $request->file('image');
         $slug = str_slug($request->name);
@@ -63,8 +63,8 @@ class ItemController extends Controller
         $item->name= $request->name;
         $item->description= $request->description;
         $item->price= $request->price;
-        $item->client_name= $request->client_name;
-        $item->Services= $request->Services;
+        $item->clients_name= $request->clients_name;
+        $item->Service= $request->Service;
         $item->Project= $request->Project;
         $item->image= $imagename;
         $item->save();
@@ -100,9 +100,9 @@ class ItemController extends Controller
             'name'=>'required',
             'description'=>'required',
             'price'=>'required',
-            'client_name'=>'required',
-            'project'=>'required',
-            'services'=>'required'
+            'clients_name'=>'required',
+            'Service'=>'required',
+            'Project'=>'required'
     
          
         ]);

@@ -1,258 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@include('layouts.frontend.head')
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Home One || zeena || HTML 5 Template </title>
-    <!-- favicons Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
-    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-    <meta name="description" content="zeena HTML 5 Template " />
-
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('frontend/vendors/bootstrap/css/bootstrap.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/vendors/animate/animate.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/vendors/animate/custom-animate.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/vendors/fontawesome/css/all.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/vendors/jarallax/jarallax.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/vendors/jquery-magnific-popup/jquery.magnific-popup.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/vendors/odometer/odometer.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/vendors/swiper/swiper.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/vendors/zeena-icons/style.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/vendors/reey-font/stylesheet.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/vendors/owl-carousel/owl.carousel.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/vendors/owl-carousel/owl.theme.default.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/vendors/bootstrap-select/css/bootstrap-select.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/vendors/jquery-ui/jquery-ui.css')}}" />
-    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
-
-    <!-- template styles -->
-    <link rel="stylesheet" href="{{asset('frontend/css/zeena.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/css/zeena-responsive.css')}}" />
-</head>
-
-<body class="custom-cursor">
-
-    <div class="custom-cursor__cursor"></div>
-    <div class="custom-cursor__cursor-two"></div>
-
-
-
-
-
-    <div class="preloader">
-        <div class="preloader__image"></div>
-    </div>
-    <!-- /.preloader -->
-
-
-    <div class="page-wrapper">
-        <header class="main-header">
-            <div class="main-header__top">
-                <div class="main-header__top-inner">
-                    <ul class="list-unstyled main-header__contact-list">
-                        <li>
-                            <div class="icon">
-                                <i class="fas fa-map-marker"></i>
-                            </div>
-                            <div class="text">
-                                <p>66 Road Broklyn Golden Street. New York</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="text">
-                                <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="main-header__top-text-and-social">
-                        <div class="list-unstyled main-header__top-text">
-                            <p><span>Now Hiring:</span> Are you a driven and motivated 1st Line IT Support Engineer?</p>
-                        </div>
-                        <div class="main-header__top-social">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <nav class="main-menu">
-                <div class="main-menu__wrapper">
-                    <div class="main-menu__wrapper-inner">
-                        <div class="main-menu__left">
-                            <div class="main-menu__logo">
-                                <a href="index.html"><img src="assets/images/resources/logo-1.png" alt=""></a>
-                            </div>
-                            <div class="main-menu__main-menu-box">
-                                <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
-                                <ul class="main-menu__list">
-                                    <li class="dropdown current megamenu">
-                                        <a href="index.html">Home </a>
-                                        <ul>
-                                            <li>
-                                                <section class="home-showcase">
-                                                    <div class="container">
-                                                        <div class="home-showcase__inner">
-                                                            <div class="row">
-                                                                <div class="col-lg-3">
-                                                                    <div class="home-showcase__item">
-                                                                        <div class="home-showcase__image">
-                                                                            <img src="assets/images/home-showcase/home-showcase-1-1.jpg"
-                                                                                alt="">
-                                                                            <div class="home-showcase__buttons">
-                                                                                <a href="index.html"
-                                                                                    class="thm-btn home-showcase__buttons__item">Multi
-                                                                                    Page</a>
-                                                                                <a href="index-one-page.html"
-                                                                                    class="thm-btn home-showcase__buttons__item">One
-                                                                                    Page</a>
-                                                                            </div>
-                                                                            <!-- /.home-showcase__buttons -->
-                                                                        </div><!-- /.home-showcase__image -->
-                                                                        <h3 class="home-showcase__title">Home Page 01
-                                                                        </h3>
-                                                                        <!-- /.home-showcase__title -->
-                                                                    </div><!-- /.home-showcase__item -->
-                                                                </div><!-- /.col-lg-3 -->
-                                                                <div class="col-lg-3">
-                                                                    <div class="home-showcase__item">
-                                                                        <div class="home-showcase__image">
-                                                                            <img src="assets/images/home-showcase/home-showcase-1-2.jpg"
-                                                                                alt="">
-                                                                            <div class="home-showcase__buttons">
-                                                                                <a href="index2.html"
-                                                                                    class="thm-btn home-showcase__buttons__item">Multi
-                                                                                    Page</a>
-                                                                                <a href="index2-one-page.html"
-                                                                                    class="thm-btn home-showcase__buttons__item">One
-                                                                                    Page</a>
-                                                                            </div>
-                                                                            <!-- /.home-showcase__buttons -->
-                                                                        </div><!-- /.home-showcase__image -->
-                                                                        <h3 class="home-showcase__title">Home
-                                                                            Page
-                                                                            02
-                                                                        </h3><!-- /.home-showcase__title -->
-                                                                    </div><!-- /.home-showcase__item -->
-                                                                </div><!-- /.col-lg-3 -->
-                                                                <div class="col-lg-3">
-                                                                    <div class="home-showcase__item">
-                                                                        <div class="home-showcase__image">
-                                                                            <img src="assets/images/home-showcase/home-showcase-1-3.jpg"
-                                                                                alt="">
-                                                                            <div class="home-showcase__buttons">
-                                                                                <a href="index3.html"
-                                                                                    class="thm-btn home-showcase__buttons__item">Multi
-                                                                                    Page</a>
-                                                                                <a href="index3-one-page.html"
-                                                                                    class="thm-btn home-showcase__buttons__item">One
-                                                                                    Page</a>
-                                                                            </div>
-                                                                            <!-- /.home-showcase__buttons -->
-                                                                        </div><!-- /.home-showcase__image -->
-                                                                        <h3 class="home-showcase__title">Home
-                                                                            Page
-                                                                            03
-                                                                        </h3><!-- /.home-showcase__title -->
-                                                                    </div><!-- /.home-showcase__item -->
-                                                                </div><!-- /.col-lg-3 -->
-                                                                <div class="col-lg-3">
-                                                                    <div class="home-showcase__item">
-                                                                        <div class="home-showcase__image">
-                                                                            <img src="assets/images/home-showcase/home-showcase-1-4.jpg"
-                                                                                alt="">
-                                                                            <div class="home-showcase__buttons">
-                                                                                <a href="index-dark.html"
-                                                                                    class="thm-btn home-showcase__buttons__item">View
-                                                                                    Page</a>
-                                                                            </div>
-                                                                            <!-- /.home-showcase__buttons -->
-                                                                        </div><!-- /.home-showcase__image -->
-                                                                        <h3 class="home-showcase__title">Home
-                                                                            Page
-                                                                            04
-                                                                        </h3><!-- /.home-showcase__title -->
-                                                                    </div><!-- /.home-showcase__item -->
-                                                                </div><!-- /.col-lg-3 -->
-                                                            </div><!-- /.row -->
-                                                        </div><!-- /.home-showcase__inner -->
-
-                                                    </div><!-- /.container -->
-                                                </section>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="about.html">About</a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#">Services</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="services.html">Services</a></li>
-                                            <li><a href="services-details.html">Service Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#">Pages</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="team.html">Our team</a></li>
-                                            <li><a href="team-details.html">Team details</a></li>
-                                            <li><a href="portfolio.html">Portfolio</a></li>
-                                            <li><a href="portfolio-details.html">Portfolio Details</a></li>
-                                            <li><a href="case-single.html">Case Single</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#">Blog</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="blog-details.html">Blog details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="contact.html">Contact</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="main-menu__search-cart-box">
-                                <div class="main-menu__search-box">
-                                    <a href="#" class="main-menu__search search-toggler icon-search"></a>
-                                </div>
-                                <div class="main-menu__cart-box">
-                                    <a href="cart.html" class="main-menu__cart icon-shopping-cart"></a>
-                                    <div class="main-menu__cart-count">0</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="main-menu__right">
-                            <div class="main-menu__btn-box">
-                                <a href="contact.html" class="main-menu__btn">Get A Quote <i class="fas fa-plus"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-        <div class="stricky-header stricked-menu main-menu">
-            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
-        </div><!-- /.stricky-header -->
+@include('layouts.frontend.menu')
 
         <!-- Main Sllider Start -->
            <!-- Main Sllider Start -->
@@ -599,9 +347,8 @@
                 </div>
             </div>
         </section>Benefits One End-->
-
-        <!--Portfolio One STart-->
-        <section class="portfolio-two">
+    <!--Portfolio Two Start-->
+    <section class="portfolio-two">
             <div class="container">
                 <div class="section-title-two text-center">
                     <div class="section-title-two__tagline-box">
@@ -609,94 +356,61 @@
                     </div>
                     <h2 class="section-title-two__title">Our Case Studies</h2>
                 </div>
+
+
                 <ul class="portfolio-two-filter style1 post-filter has-dynamic-filters-counter list-unstyled">
                     <li data-filter=".filter-item" class="active"><span class="filter-text">All Work</span></li>
-                    <li data-filter=".ser"><span class="filter-text">Cloud Services</span></li>
-                    <li data-filter=".illus"><span class="filter-text">illustration</span></li>
-                    <li data-filter=".photo"><span class="filter-text">Photography</span></li>
-                    <li data-filter=".web"><span class="filter-text last-pd-none">Web design</span></li>
+                    @foreach ($categories as $category )
+                    <li data-filter="#{{ $category->slug }}"><span class="filter-text">{{ $category->name}}</span></li>
+                     
+                    @endforeach
+                    
+                    
                 </ul>
+
+
                 <div class="row filter-layout">
                     <!--Portfolio Two Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 filter-item ser illus photo web">
-                        <div class="portfolio-two__single">
+                    @foreach ($items as $item )
+                    
+                    <div class="col-xl-3 col-lg-6 col-md-6 filter-item ser illus photo " id="{{$item->category->slug}}">
+                
+
+                       
+                        <div class="portfolio-two__single"><a href="{{url('portfoliodt'.$item->id)}}">
                             <div class="portfolio-two__img">
-                                <img src="assets/images/project/portfolio-two-1-1.jpg" alt="">
+                            <img src="{{asset('uploads/item/'. $item->image)}}" alt="">
+                            
+                            <a href="{{url('portfolio'.$item->id)}}">
                                 <div class="portfolio-two__content">
-                                    <p class="portfolio-two__sub-title">Web design</p>
-                                    <h3 class="portfolio-two__title"><a href="portfolio-details.html">Fimlor
-                                            Experience</a></h3>
+                                    <p class="portfolio-two__sub-title">{{$item->name}}</p>
+                                    <p class="portfolio-two__sub-title mt-2">Price: {{$item->price}}</p>
+                                    
+                                    <h3 class="portfolio-two__title"><a href="{{url('portfoliodt'.$item->id)}}">{{$item->category->name}} </a></h3>
                                 </div>
+                                </a>
+
+
                                 <div class="portfolio-two__arrow">
-                                    <a href="assets/images/project/portfolio-two-1-1.jpg" class="img-popup">
+                                    <a href="{{asset('uploads/item/'. $item->image)}}" class="img-popup">
                                         <span class="icon-back"></span>
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                            </a>
+                        </div> 
                     </div>
+                    
+                    @endforeach
                     <!--Portfolio Two Single End-->
-                    <!--Portfolio Two Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 filter-item ser web">
-                        <div class="portfolio-two__single">
-                            <div class="portfolio-two__img">
-                                <img src="assets/images/project/portfolio-two-1-2.jpg" alt="">
-                                <div class="portfolio-two__content">
-                                    <p class="portfolio-two__sub-title">Web design</p>
-                                    <h3 class="portfolio-two__title"><a href="portfolio-details.html">Fimlor
-                                            Experience</a></h3>
-                                </div>
-                                <div class="portfolio-two__arrow">
-                                    <a href="assets/images/project/portfolio-two-1-2.jpg" class="img-popup">
-                                        <span class="icon-back"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Portfolio Two Single End-->
-                    <!--Portfolio Two Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 filter-item illus photo">
-                        <div class="portfolio-two__single">
-                            <div class="portfolio-two__img">
-                                <img src="assets/images/project/portfolio-two-1-3.jpg" alt="">
-                                <div class="portfolio-two__content">
-                                    <p class="portfolio-two__sub-title">Web design</p>
-                                    <h3 class="portfolio-two__title"><a href="portfolio-details.html">Fimlor
-                                            Experience</a></h3>
-                                </div>
-                                <div class="portfolio-two__arrow">
-                                    <a href="assets/images/project/portfolio-two-1-3.jpg" class="img-popup">
-                                        <span class="icon-back"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Portfolio Two Single End-->
-                    <!--Portfolio Two Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 filter-item ser illus">
-                        <div class="portfolio-two__single">
-                            <div class="portfolio-two__img">
-                                <img src="assets/images/project/portfolio-two-1-4.jpg" alt="">
-                                <div class="portfolio-two__content">
-                                    <p class="portfolio-two__sub-title">Web design</p>
-                                    <h3 class="portfolio-two__title"><a href="portfolio-details.html">Fimlor
-                                            Experience</a></h3>
-                                </div>
-                                <div class="portfolio-two__arrow">
-                                    <a href="assets/images/project/portfolio-two-1-4.jpg" class="img-popup">
-                                        <span class="icon-back"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Portfolio Two Single End-->
+
+
+
+
                 </div>
             </div>
         </section>
-        <!--Portfolio One End-->
+        <!--Portfolio Two End-->
 
         <!--FAQ One Start
         <section class="faq-one">
@@ -1038,40 +752,18 @@
         </section>
         <!--Team One End-->
 
-        <!--Video One Start-->
-        <section class="video-one">
-            <div class="video-one__bg" style="background-image: url(assets/images/backgrounds/video-one-bg.jpg);"></div>
-            <div class="video-one__bg-2" style="background-image: url(assets/images/backgrounds/video-one-bg-2.jpg);">
-            </div>
-            <div class="video-one__bg-3" style="background-image: url(assets/images/backgrounds/video-one-bg-3.png);">
-            </div>
-            <div class="video-one__bg-4" style="background-image: url(assets/images/backgrounds/video-one-bg-4.png);">
-            </div>
-            <div class="container">
-                <div class="video-one__inner">
-                    <div class="video-one__video-link">
-                        <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
-                            <div class="video-one__video-icon">
-                                <span class="fa fa-play"></span>
-                                <i class="ripple"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <h3 class="video-one__title">Watch This Video Presentation
-                        <br> Our Work And Etc</h3>
-                </div>
-            </div>
-        </section>
+
         <!--Video One End-->
 
         <!--Testimonial One Start-->
-        <section class="testimonial-one">
+         <!--Testimonial One Start-->
+   <section class="testimonial-one">
             <div class="testimonial-one__wrap">
                 <div class="container">
                     <div class="section-title text-center">
                         <div class="section-title__tagline-box">
                             <div class="section-title__tagline-icon">
-                                <img src="assets/images/icon/section-title-icon.png" alt="">
+                                <img src="frontend/images/icon/section-title-icon.png" alt="">
                             </div>
                             <p class="section-title__tagline">Our Testimonial</p>
                         </div>
@@ -1107,202 +799,66 @@
                                         }
                                     }'>
                                         <!--Testimonial One Single Start-->
+                                        @foreach ($testimonials as $key=>$testimonial)
                                         <div class="item">
+                                        
                                             <div class="testimonial-one__single">
                                                 <div class="testimonial-one__quote">
                                                     <span class="icon-left1"></span>
+                                                    
                                                 </div>
-                                                <p class="testimonial-one__text">Lorem ipsum is to create a natura
-                                                    consectetur in a tip
-                                                    looking block of text that doesn'tdistract from the largere
-                                                    layout aying out pages with meaningle aute are bigiger
-                                                    in reprehenderit nulla pariatur at doesn'tdistra gseoert
-                                                    loked tips for at busimsgd juge the ateste workseres.</p>
+                                                <p class="testimonial-one__text" style="text-align: justify;">{{$testimonial->review_artical}}
+                                                   </p>
                                                 <div class="testimonial-one__client-box">
                                                     <div class="testimonial-one__client-img">
-                                                        <img src="assets/images/testimonial/testimonial-1-1.jpg" alt="">
+                                                        <img src="{{asset('uploads/testimonial/'. $testimonial->image)}}" alt="" style="width:80px;"> 
                                                     </div>
                                                     <div class="testimonial-one__client-info">
-                                                        <h3 class="testimonial-one__client-name"><span>J</span>ason
-                                                            Smith
+                                                        <h3 class="testimonial-one__client-name">{{$testimonial->Client_name}}
                                                         </h3>
-                                                        <p class="testimonial-one__client-sub-title">Web Designer</p>
+                                                        <p class="testimonial-one__client-sub-title">{{$testimonial->Client_designation}}</p>
                                                         <div class="testimonial-one__client-ratting">
+                                                            <span class=""> 
                                                             <span class="fa fa-star"></span>
                                                             <span class="fa fa-star"></span>
                                                             <span class="fa fa-star"></span>
-                                                            <span class="fa fa-star-half-alt"></span>
-                                                            <span class="fa fa-star-half-alt"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                           
+                                                        </span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+
+
                                         </div>
+                                        @endforeach
                                         <!--Testimonial One Single End-->
                                         <!--Testimonial One Single Start-->
-                                        <div class="item">
-                                            <div class="testimonial-one__single">
-                                                <div class="testimonial-one__quote">
-                                                    <span class="icon-left1"></span>
-                                                </div>
-                                                <p class="testimonial-one__text">Lorem ipsum is to create a natura
-                                                    consectetur in a tip
-                                                    looking block of text that doesn'tdistract from the largere
-                                                    layout aying out pages with meaningle aute are bigiger
-                                                    in reprehenderit nulla pariatur at doesn'tdistra gseoert
-                                                    loked tips for at busimsgd juge the ateste workseres.</p>
-                                                <div class="testimonial-one__client-box">
-                                                    <div class="testimonial-one__client-img">
-                                                        <img src="assets/images/testimonial/testimonial-1-2.jpg" alt="">
-                                                    </div>
-                                                    <div class="testimonial-one__client-info">
-                                                        <h3 class="testimonial-one__client-name"><span>A</span>lisha
-                                                            Martin
-                                                        </h3>
-                                                        <p class="testimonial-one__client-sub-title">Web Designer</p>
-                                                        <div class="testimonial-one__client-ratting">
-                                                            <span class="fa fa-star"></span>
-                                                            <span class="fa fa-star"></span>
-                                                            <span class="fa fa-star"></span>
-                                                            <span class="fa fa-star-half-alt"></span>
-                                                            <span class="fa fa-star-half-alt"></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
                                         <!--Testimonial One Single End-->
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-xl-6 col-lg-6">
+
                                 <div class="testimonial-one__right">
                                     <div class="testimonial-one__img">
-                                        <img src="assets/images/testimonial/testimonial-one-img-1.jpg" alt="">
+                                        <img src="{{asset('uploads/testimonial/shh-2024-10-03-.jpg')}}" alt="">
+
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <!--Testimonial One End-->
-
-        <!--Blog One Start-->
-        <section class="blog-one">
-            <div class="container">
-                <div class="section-title text-center">
-                    <div class="section-title__tagline-box">
-                        <div class="section-title__tagline-icon">
-                            <img src="assets/images/icon/section-title-icon.png" alt="">
-                        </div>
-                        <p class="section-title__tagline">Our Blog</p>
-                    </div>
-                    <h2 class="section-title__title">Latest Articles & Blogs</h2>
-                </div>
-                <div class="row">
-                    <!--Blog One Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
-                        <div class="blog-one__single">
-                            <div class="blog-one__img-box">
-                                <div class="blog-one__img">
-                                    <img src="assets/images/blog/blog-1-1.jpg" alt="">
-                                </div>
-                                <div class="blog-one__date">
-                                    <p>20
-                                        <br> May</p>
-                                </div>
-                            </div>
-                            <div class="blog-one__content">
-                                <ul class="blog-one__meta list-unstyled">
-                                    <li>
-                                        <p><span class="fa fa-user"></span>Admin</p>
-                                    </li>
-                                    <li>
-                                        <p><span class="fa fa-comments"></span>02 Comment</p>
-                                    </li>
-                                </ul>
-                                <h3 class="blog-one__title"><a href="blog-details.html">Easy Yo Use our Software New
-                                        Innovation</a></h3>
-                                <p class="blog-one__text">Lorem ipsum is simply is text used by copytyping refreshing.
-                                </p>
-                                <div class="blog-one__btn">
-                                    <a href="blog-details.html">Read more<span class="icon-right-arrow1"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Blog One Single End-->
-                    <!--Blog One Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
-                        <div class="blog-one__single">
-                            <div class="blog-one__img-box">
-                                <div class="blog-one__img">
-                                    <img src="assets/images/blog/blog-1-2.jpg" alt="">
-                                </div>
-                                <div class="blog-one__date">
-                                    <p>20
-                                        <br> May</p>
-                                </div>
-                            </div>
-                            <div class="blog-one__content">
-                                <ul class="blog-one__meta list-unstyled">
-                                    <li>
-                                        <p><span class="fa fa-user"></span>Admin</p>
-                                    </li>
-                                    <li>
-                                        <p><span class="fa fa-comments"></span>02 Comment</p>
-                                    </li>
-                                </ul>
-                                <h3 class="blog-one__title"><a href="blog-details.html">Ipsum is simply is text used by
-                                        copytyping</a></h3>
-                                <p class="blog-one__text">Lorem ipsum is simply is text used by copytyping refreshing.
-                                </p>
-                                <div class="blog-one__btn">
-                                    <a href="blog-details.html">Read more<span class="icon-right-arrow1"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Blog One Single End-->
-                    <!--Blog One Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="blog-one__single">
-                            <div class="blog-one__img-box">
-                                <div class="blog-one__img">
-                                    <img src="assets/images/blog/blog-1-3.jpg" alt="">
-                                </div>
-                                <div class="blog-one__date">
-                                    <p>20
-                                        <br> May</p>
-                                </div>
-                            </div>
-                            <div class="blog-one__content">
-                                <ul class="blog-one__meta list-unstyled">
-                                    <li>
-                                        <p><span class="fa fa-user"></span>Admin</p>
-                                    </li>
-                                    <li>
-                                        <p><span class="fa fa-comments"></span>02 Comment</p>
-                                    </li>
-                                </ul>
-                                <h3 class="blog-one__title"><a href="blog-details.html">Simply is text used by
-                                        copytyping refreshing.</a></h3>
-                                <p class="blog-one__text">Lorem ipsum is simply is text used by copytyping refreshing.
-                                </p>
-                                <div class="blog-one__btn">
-                                    <a href="blog-details.html">Read more<span class="icon-right-arrow1"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Blog One Single End-->
-                </div>
-            </div>
-        </section>
-        <!--Blog One End-->
-
+        <!--Testimonial One End-->
         <!--Newsletter One Start-->
         <section class="newsletter-one">
             <div class="container">
