@@ -17,6 +17,9 @@ use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\SkillController;
 use App\Http\Controllers\Page\TeammamberDtController;
 use App\Http\Controllers\Pages\AboutusColtroller;
+use App\Http\Controllers\Pages\ServicessController;
+use App\Http\Controllers\Pages\PortfoliopController;
+
 
 
 
@@ -70,6 +73,10 @@ Route::group(['prefix' => '/'],function(){
 });
 Route::group(['prefix' => '/'],function(){
     Route::get('about-us' , [App\Http\Controllers\Pages\AboutusColtroller::class, 'index'])->name('pages.about-us');
+    Route::resource('services', App\Http\Controllers\Pages\ServicessController::class);
+    Route::get('portfolio' , [App\Http\Controllers\Pages\PortfoliopController::class, 'index'])->name('pages.portfolio');
+
+    
     
     
 });

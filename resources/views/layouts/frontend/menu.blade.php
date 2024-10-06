@@ -34,19 +34,19 @@
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="text">
-                                <p><a href="mailto:{{$menu->email}}">{{$menu->email}}</a></p>
+                                <p><a href="mailto:{{$menu->email}}" target="_blank">{{$menu->email}}</a></p>
                             </div>
                         </li>
                     </ul>
                     <div class="main-header__top-text-and-social">
                         <div class="main-header__top-social">
                           
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                            <a href="#"><i class="fab fa-dribbble"></i></a>
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="{{url($menu->facebook)}}" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="{{url($menu->twitter)}}" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="{{url($menu->instagram)}}" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="{{url($menu->pinterest)}}" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="{{url($menu->dribble)}}" target="_blank"><i class="fab fa-dribbble"></i></a>
+                            <a href="{{url($menu->linkedin)}}" target="_blank"><i class="fab fa-linkedin"></i></a>
 
 
                            

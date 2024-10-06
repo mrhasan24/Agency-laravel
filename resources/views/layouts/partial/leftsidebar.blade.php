@@ -26,7 +26,7 @@
                     <a href="index.html" class="waves-effect"><i class="ti-home"></i><span> Dashboard </span></a>
                 </li>
                 <li>
-                    <a href="index.html" class="waves-effect"><i class="ti-home"></i><span> Home Page </span></a>
+                    <a href="{{ route('home.index')}}" class="waves-effect"><i class="ti-home"></i><span> Home Page </span></a>
                 </li>
 
                 <li class="has_sub">
