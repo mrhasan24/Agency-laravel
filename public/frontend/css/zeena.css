@@ -2223,7 +2223,7 @@ ul {
   background-image: -ms-linear-gradient(128.66deg, rgb(34, 34, 34) 0%, rgb(144, 81, 55) 57%, rgb(254, 127, 76) 100%);
   position: absolute;
   left: 0px;
-  top: 120px;
+  top: 85px;
   bottom: 0;
   width: 1130px;
   height: 867px;
@@ -3320,9 +3320,9 @@ ul {
 .about-one__right {
   position: relative;
   display: block;
-  /* margin-left: 80px; */
+  margin-left: 80px;
   margin-right: -53px;
-  /* margin-top: 45px; */
+  margin-top: 45px;
   margin-bottom: 55px;
 }
 

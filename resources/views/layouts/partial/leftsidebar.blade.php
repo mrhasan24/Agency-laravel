@@ -35,6 +35,7 @@
                         <li><a href="{{ route('slider.index')}}">Slider</a></li>
                         <li><a href="{{ route('feature.index')}}">Feature</a></li>
                         <li><a href="{{ route('about.index')}}">About</a></li>
+                        <li><a href="{{ route('skill.index')}}">Skill</a></li>
                         <li><a href="{{ route('category.index')}}">Category</a></li>
                         <li><a href="{{ route('item.index')}}">Portfolio</a></li>
                         <li><a href="{{ route('successcounter.index')}}">Success Score</a></li>

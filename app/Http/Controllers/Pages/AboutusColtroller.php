@@ -9,6 +9,8 @@ use App\Models\Feature;
 use App\Models\Team;
 use App\Models\Successcounter;
 use App\Models\Testimonial;
+use App\Models\Skill;
+use App\Models\Menu;
 
 class AboutusColtroller extends Controller
 {
@@ -23,11 +25,13 @@ class AboutusColtroller extends Controller
         $teams = Team::all();
         $testimonials = Testimonial::all();
         $successcounters = Successcounter::all();
+        $skills = Skill::all();
+        $menus = Menu::all();
         // $aboutus = Aboutus::all();
         // $header = Header::all();
         // $ctss = Cts::all();
         // $teams = team::all();
-        return view('pages.about', compact('abouts', 'features', 'teams', 'testimonials', 'successcounters'));
+        return view('pages.about', compact('abouts', 'features', 'teams', 'testimonials', 'successcounters', 'skills', 'menus'));
     }
 
     /**

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\FeatureController;
 use App\Http\Controllers\Admin\AboutController;
@@ -13,7 +14,7 @@ use App\Http\Controllers\Admin\SuccesscounterController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\SimfController;
 use App\Http\Controllers\Admin\TestimonialController;
-
+use App\Http\Controllers\Admin\SkillController;
 use App\Http\Controllers\Page\TeammamberDtController;
 use App\Http\Controllers\Pages\AboutusColtroller;
 
@@ -49,6 +50,7 @@ Route::get('/', [App\Http\Controllers\HomepageCOntroller::class, 'index']);
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     Route::get('dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index']);
+    Route::resource('home', App\Http\Controllers\Admin\MenuController::class);
     Route::resource('slider', App\Http\Controllers\Admin\SliderController::class);
     Route::resource('feature', App\Http\Controllers\Admin\FeatureController::class);
     Route::resource('about', App\Http\Controllers\Admin\AboutController::class);
@@ -58,6 +60,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::resource('successcounter', App\Http\Controllers\Admin\SuccesscounterController::class);
     Route::resource('team', App\Http\Controllers\Admin\TeamController::class);
     Route::resource('testimonial', App\Http\Controllers\Admin\TestimonialController::class);
+    Route::resource('skill', App\Http\Controllers\Admin\SkillController::class);
 });
 
 Route::group(['prefix' => '/'],function(){

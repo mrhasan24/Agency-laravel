@@ -75,27 +75,20 @@
                     </div>
                 </div>
                 @endforeach
-
+                @foreach ($skills as $key=>$skill)
                 <div class="row">
                     <div class="col-xl-12">
-                        <h1>HTML</h1>
-                    <div class="progress"> 
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="one_progress " style="margin-buttom:50px">
+                        <h5 class="mb-2">{{$skill->skilltitle}}</h5>
+                            <div class="progress"> 
+                        <div class="progress-bar bg-success" role="progressbar" style="width: {{$skill->skillparcent}}%" aria-valuenow="{{$skill->skillparcent}}" aria-valuemin="0" aria-valuemax="100">{{$skill->skillparcent}}%</div>
                         </div>
-                        <h1>HTML</h1>
-                        <div class="progress">
-                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+
                         </div>
-                        <h1>HTML</h1>
-                        <div class="progress">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <h1>HTML</h1>
-                        <div class="progress">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
+                          
                     </div>
                 </div>
+                @endforeach
              
             </div>
         </section>
