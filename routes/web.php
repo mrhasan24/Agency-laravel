@@ -15,6 +15,8 @@ use App\Http\Controllers\Admin\SimfController;
 use App\Http\Controllers\Admin\TestimonialController;
 
 use App\Http\Controllers\Page\TeammamberDtController;
+use App\Http\Controllers\Pages\AboutusColtroller;
+
 
 
 
@@ -60,6 +62,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
 Route::group(['prefix' => '/'],function(){
     Route::get('team-details' , [App\Http\Controllers\Page\TeammamberDtController::class, 'index'])->name('pages.team');
+    
+    
+});
+Route::group(['prefix' => '/'],function(){
+    Route::get('about-us' , [App\Http\Controllers\Pages\AboutusColtroller::class, 'index'])->name('pages.about-us');
     
     
 });

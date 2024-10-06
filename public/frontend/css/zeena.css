@@ -3320,9 +3320,9 @@ ul {
 .about-one__right {
   position: relative;
   display: block;
-  margin-left: 80px;
+  /* margin-left: 80px; */
   margin-right: -53px;
-  margin-top: 45px;
+  /* margin-top: 45px; */
   margin-bottom: 55px;
 }
 
