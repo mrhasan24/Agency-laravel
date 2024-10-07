@@ -68,10 +68,10 @@
                                         <a href="/">Home </a>
                                     </li>
                                     <li>
-                                        <a href="/about-us">About</a>
+                                        <a href="about-us">About</a>
                                     </li>
                                     <li class="">
-                                        <a href="#">Services</a>
+                                        <a href="services">Services</a>
                                         <!-- <ul class="sub-menu">
                                             <li><a href="services.html">Services</a></li>
                                             <li><a href="services-details.html">Service Details</a></li>
@@ -79,11 +79,11 @@
                                     </li>
                                  
                                     <li>
-                                    <a href="portfolio.html">Portfolio</a>
+                                    <a href="portfolio">Portfolio</a>
                                     </li>
                                    
                                     <li>
-                                        <a href="contact.html">Contact</a>
+                                        <a href="contact-us">Contact</a>
                                     </li>
                                     <li>
                                         <a href="tel:{{$menu->phone}}">{{$menu->phone}}</a>
@@ -94,7 +94,7 @@
                         </div>
                         <div class="main-menu__right">
                             <div class="main-menu__btn-box">
-                                <a href="contact.html" class="main-menu__btn">Get A Quote <i class="fas fa-plus"></i>
+                                <a href="contact-us" class="main-menu__btn">Get A Quote <i class="fas fa-plus"></i>
                                 </a>
                             </div>
                         </div>

@@ -15,10 +15,14 @@ use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\SimfController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\SkillController;
+use App\Http\Controllers\Admin\ContactController;
+
+
 use App\Http\Controllers\Page\TeammamberDtController;
 use App\Http\Controllers\Pages\AboutusColtroller;
 use App\Http\Controllers\Pages\ServicessController;
 use App\Http\Controllers\Pages\PortfoliopController;
+use App\Http\Controllers\Page\ContactpController;
 
 
 
@@ -64,6 +68,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::resource('team', App\Http\Controllers\Admin\TeamController::class);
     Route::resource('testimonial', App\Http\Controllers\Admin\TestimonialController::class);
     Route::resource('skill', App\Http\Controllers\Admin\SkillController::class);
+    Route::resource('contact', App\Http\Controllers\Admin\ContactController::class);
 });
 
 Route::group(['prefix' => '/'],function(){
@@ -80,3 +85,12 @@ Route::group(['prefix' => '/'],function(){
     
     
 });
+
+
+Route::POST('/contacts', [App\Http\Controllers\ContactController::class, 'contact'])->name('contacts.contact');
+
+
+
+
+
+Route::post('/contact-us', [App\Http\Controllers\Pages\ContactpController::class, 'index'])->name('pages.contact');

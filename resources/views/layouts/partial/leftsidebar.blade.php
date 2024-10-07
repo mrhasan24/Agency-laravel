@@ -41,6 +41,8 @@
                         <li><a href="{{ route('successcounter.index')}}">Success Score</a></li>
                         <li><a href="{{ route('team.index')}}">Team</a></li>
                         <li><a href="{{ route('testimonial.index')}}">Testimonial</a></li>
+                        <li><a href="{{ route('contact.index')}}">Contact</a></li>
+
                         <li><a href="ui-progressbars.html">Progress Bars</a></li>
                         <li><a href="ui-alerts.html">Alerts</a></li>
                         <li><a href="ui-sweet-alert.html">Sweet-Alert</a></li>
